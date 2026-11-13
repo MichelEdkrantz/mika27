@@ -12,6 +12,24 @@
 </head>
 <body>
 
+  <!-- Reusable vitsippa (wood anemone) SVG -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="vitsippa" viewBox="-50 -50 100 100">
+        <g>
+          <ellipse cx="0" cy="-26" rx="12" ry="22" fill="#ffffff" stroke="#d6e4cf" stroke-width="0.6"/>
+          <ellipse cx="0" cy="-26" rx="12" ry="22" fill="#ffffff" stroke="#d6e4cf" stroke-width="0.6" transform="rotate(60)"/>
+          <ellipse cx="0" cy="-26" rx="12" ry="22" fill="#ffffff" stroke="#d6e4cf" stroke-width="0.6" transform="rotate(120)"/>
+          <ellipse cx="0" cy="-26" rx="12" ry="22" fill="#ffffff" stroke="#d6e4cf" stroke-width="0.6" transform="rotate(180)"/>
+          <ellipse cx="0" cy="-26" rx="12" ry="22" fill="#ffffff" stroke="#d6e4cf" stroke-width="0.6" transform="rotate(240)"/>
+          <ellipse cx="0" cy="-26" rx="12" ry="22" fill="#ffffff" stroke="#d6e4cf" stroke-width="0.6" transform="rotate(300)"/>
+          <circle r="8" fill="#e0cf4e"/>
+          <circle r="4.5" fill="#f3e58a"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
   <header class="hero">
     <nav class="nav">
       <ul>
@@ -30,6 +48,16 @@
     </div>
 
     <div class="hero__leaves" aria-hidden="true"></div>
+
+    <div class="vitsippor" aria-hidden="true">
+      <svg class="vitsippa vitsippa--1"><use href="#vitsippa"/></svg>
+      <svg class="vitsippa vitsippa--2"><use href="#vitsippa"/></svg>
+      <svg class="vitsippa vitsippa--3"><use href="#vitsippa"/></svg>
+      <svg class="vitsippa vitsippa--4"><use href="#vitsippa"/></svg>
+      <svg class="vitsippa vitsippa--5"><use href="#vitsippa"/></svg>
+      <svg class="vitsippa vitsippa--6"><use href="#vitsippa"/></svg>
+      <svg class="vitsippa vitsippa--7"><use href="#vitsippa"/></svg>
+    </div>
   </header>
 
   <main>
@@ -37,6 +65,7 @@
     <section id="program" class="section">
       <div class="section__inner">
         <h2>Program</h2>
+        <div class="section__divider" aria-hidden="true"><svg><use href="#vitsippa"/></svg></div>
         <p class="lead">En dag att minnas tillsammans.</p>
         <ul class="schedule">
           <li>
@@ -66,6 +95,7 @@
     <section id="plats" class="section section--alt">
       <div class="section__inner">
         <h2>Plats</h2>
+        <div class="section__divider" aria-hidden="true"><svg><use href="#vitsippa"/></svg></div>
         <p class="lead">Sjölyckan, Tollered</p>
         <p>
           Vår dag äger rum på Sjölyckan i Tollered — en vacker plats vid vattnet
@@ -83,6 +113,7 @@
     <section id="boende" class="section">
       <div class="section__inner">
         <h2>Boende</h2>
+        <div class="section__divider" aria-hidden="true"><svg><use href="#vitsippa"/></svg></div>
         <p>
           Vi rekommenderar
           <a href="https://www.naasfabriker.se/" target="_blank" rel="noopener">Nääs Fabriker</a>
@@ -94,6 +125,7 @@
     <section id="osa" class="section section--alt">
       <div class="section__inner">
         <h2>OSA</h2>
+        <div class="section__divider" aria-hidden="true"><svg><use href="#vitsippa"/></svg></div>
         <p class="lead">Vi vill gärna veta om du kommer!</p>
         <p>
           Vänligen meddela oss senast <strong>1 februari 2027</strong>.
@@ -111,6 +143,7 @@
     <section id="info" class="section">
       <div class="section__inner">
         <h2>Information</h2>
+        <div class="section__divider" aria-hidden="true"><svg><use href="#vitsippa"/></svg></div>
 
         <div class="info-grid">
           <div class="info-card">
