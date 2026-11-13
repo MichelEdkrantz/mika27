@@ -113,6 +113,7 @@ a:hover {
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   clip-path: url(#heart-clip);
+  -webkit-clip-path: url(#heart-clip);
 }
 
 .hero__eyebrow {
