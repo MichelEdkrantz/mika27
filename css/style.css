@@ -59,18 +59,20 @@ a:hover {
   align-items: center;
   text-align: center;
   background:
-    radial-gradient(circle at 20% 20%, rgba(169, 201, 164, 0.35), transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(228, 239, 221, 0.6), transparent 55%),
-    linear-gradient(180deg, var(--cream) 0%, var(--white) 100%);
+    linear-gradient(180deg, rgba(250, 249, 243, 0.55) 0%, rgba(250, 249, 243, 0.35) 40%, rgba(250, 249, 243, 0.75) 100%),
+    url("../images/vitsippor.jpg") center / cover no-repeat;
   overflow: hidden;
   padding: 4rem 1.5rem;
 }
 
 .nav {
   position: absolute;
-  top: 1.5rem;
+  top: 0;
   left: 0;
   right: 0;
+  padding: 1.25rem 0;
+  background: linear-gradient(180deg, rgba(250, 249, 243, 0.85), rgba(250, 249, 243, 0));
+  z-index: 3;
 }
 
 .nav ul {
@@ -87,12 +89,12 @@ a:hover {
   font-size: 0.85rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--ink-soft);
+  color: var(--green-deep);
   border: none;
 }
 
 .nav a:hover {
-  color: var(--green-deep);
+  color: var(--green-medium);
 }
 
 .hero__inner {
@@ -105,8 +107,9 @@ a:hover {
   font-size: 0.85rem;
   letter-spacing: 0.35em;
   text-transform: uppercase;
-  color: var(--green-medium);
+  color: var(--green-deep);
   margin: 0 0 1.5rem;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
 }
 
 .hero__names {
@@ -115,6 +118,7 @@ a:hover {
   color: var(--green-deep);
   font-weight: 500;
   line-height: 1.05;
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.5);
 }
 
 .amp {
@@ -126,20 +130,10 @@ a:hover {
 .hero__date {
   font-family: var(--font-display);
   font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-  color: var(--ink-soft);
+  color: var(--ink);
   margin: 1.5rem 0 0;
   letter-spacing: 0.05em;
-}
-
-/* decorative leaves — soft radial blobs in corners */
-.hero__leaves {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(ellipse 200px 120px at 10% 95%, rgba(106, 154, 111, 0.18), transparent 60%),
-    radial-gradient(ellipse 240px 140px at 90% 10%, rgba(106, 154, 111, 0.15), transparent 60%);
-  z-index: 1;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.6);
 }
 
 /* ---------- Sections ---------- */
@@ -190,45 +184,6 @@ a:hover {
   flex-shrink: 0;
 }
 
-/* ---------- Vitsippor ---------- */
-
-.vitsippor {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.vitsippa {
-  position: absolute;
-  width: 48px;
-  height: 48px;
-  filter: drop-shadow(0 2px 6px rgba(63, 107, 74, 0.08));
-  animation: sway 7s ease-in-out infinite;
-}
-
-.vitsippa--1 { top: 8%;    left: 6%;   width: 70px; height: 70px; --r: -18deg; animation-delay: 0s;    }
-.vitsippa--2 { top: 14%;   right: 9%;  width: 55px; height: 55px; --r: 22deg;  animation-delay: -1.5s; }
-.vitsippa--3 { top: 68%;   left: 12%;  width: 85px; height: 85px; --r: 8deg;   animation-delay: -3s;   }
-.vitsippa--4 { bottom: 8%; right: 14%; width: 65px; height: 65px; --r: -12deg; animation-delay: -2s;   }
-.vitsippa--5 { top: 48%;   left: 4%;   width: 36px; height: 36px; --r: 35deg;  animation-delay: -4s;   opacity: 0.85; }
-.vitsippa--6 { top: 32%;   right: 5%;  width: 40px; height: 40px; --r: -24deg; animation-delay: -2.5s; opacity: 0.85; }
-.vitsippa--7 { bottom: 20%; left: 46%; width: 44px; height: 44px; --r: 14deg;  animation-delay: -5s;   opacity: 0.8;  }
-
-@keyframes sway {
-  0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
-  50%      { transform: translateY(-4px) rotate(calc(var(--r, 0deg) + 3deg)); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .vitsippa { animation: none; }
-}
-
-@media (max-width: 600px) {
-  .vitsippa { transform: scale(0.65) rotate(var(--r, 0deg)); }
-  .vitsippa--7 { display: none; }
-}
 
 .lead {
   text-align: center;
